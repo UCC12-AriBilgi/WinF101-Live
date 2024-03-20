@@ -47,6 +47,7 @@
             this.btonExit.TabIndex = 0;
             this.btonExit.Text = "Çıkış";
             this.btonExit.UseVisualStyleBackColor = true;
+            this.btonExit.Click += new System.EventHandler(this.btonExit_Click);
             // 
             // label1
             // 
@@ -87,9 +88,10 @@
             // lbelMesaj
             // 
             this.lbelMesaj.AutoSize = true;
+            this.lbelMesaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbelMesaj.Location = new System.Drawing.Point(35, 179);
             this.lbelMesaj.Name = "lbelMesaj";
-            this.lbelMesaj.Size = new System.Drawing.Size(41, 15);
+            this.lbelMesaj.Size = new System.Drawing.Size(58, 23);
             this.lbelMesaj.TabIndex = 5;
             this.lbelMesaj.Text = "label3";
             // 
@@ -109,6 +111,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 419);
+            this.ControlBox = false;
             this.Controls.Add(this.btonMesaj);
             this.Controls.Add(this.lbelMesaj);
             this.Controls.Add(this.tboxSoyad);
