@@ -16,5 +16,10 @@ namespace P01_HelloWorld
         {
             InitializeComponent();
         }
+
+        private void btonClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }
