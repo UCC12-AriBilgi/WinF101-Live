@@ -59,5 +59,12 @@ namespace P02_Controls
 
             frmListBox.ShowDialog();
         }
+
+        private void dateTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDateTime frmDateTime = new frmDateTime();
+
+            frmDateTime.ShowDialog();
+        }
     }
 }
