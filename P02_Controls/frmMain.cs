@@ -66,5 +66,12 @@ namespace P02_Controls
 
             frmDateTime.ShowDialog();
         }
+
+        private void timerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTimer frmTimer = new frmTimer();
+
+            frmTimer.ShowDialog();
+        }
     }
 }

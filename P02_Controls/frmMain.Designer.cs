@@ -38,6 +38,7 @@
             this.comboBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +89,8 @@
             this.checkedListBoxToolStripMenuItem,
             this.comboBoxToolStripMenuItem,
             this.listBoxToolStripMenuItem,
-            this.dateTimeToolStripMenuItem});
+            this.dateTimeToolStripMenuItem,
+            this.timerToolStripMenuItem});
             this.kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             this.kontrollerToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -128,6 +130,13 @@
             this.dateTimeToolStripMenuItem.Text = "DateTime";
             this.dateTimeToolStripMenuItem.Click += new System.EventHandler(this.dateTimeToolStripMenuItem_Click);
             // 
+            // timerToolStripMenuItem
+            // 
+            this.timerToolStripMenuItem.Name = "timerToolStripMenuItem";
+            this.timerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.timerToolStripMenuItem.Text = "Timer";
+            this.timerToolStripMenuItem.Click += new System.EventHandler(this.timerToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,5 +167,6 @@
         private System.Windows.Forms.ToolStripMenuItem comboBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dateTimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem timerToolStripMenuItem;
     }
 }

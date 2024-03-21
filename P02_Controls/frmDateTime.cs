@@ -34,7 +34,7 @@ namespace P02_Controls
 
             int buYil= DateTime.Now.Year;
 
-            int yas = dYil - buYil;
+            int yas = buYil- dYil;
 
             MessageBox.Show($"Sayın {tboxAdSoyad.Text} - Siz {dYil} yılının {dAy}.ncı ayının {dGun}. gününde doğmuşsunuz. Dolayısıyla {yas} yaşındasınız...");
         }
