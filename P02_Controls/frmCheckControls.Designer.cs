@@ -46,7 +46,7 @@
             this.btonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btonClose.Location = new System.Drawing.Point(705, 390);
+            this.btonClose.Location = new System.Drawing.Point(446, 390);
             this.btonClose.Name = "btonClose";
             this.btonClose.Size = new System.Drawing.Size(83, 48);
             this.btonClose.TabIndex = 1;
@@ -156,13 +156,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(541, 450);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lbelMessage);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btonClose);
             this.Name = "frmCheckControls";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check Controls";
             this.Load += new System.EventHandler(this.frmCheckControls_Load);
             this.groupBox1.ResumeLayout(false);

@@ -52,6 +52,12 @@
     <Compile Include="frmCheckControls.Designer.cs">
       <DependentUpon>frmCheckControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCheckedListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckedListBox.Designer.cs">
+      <DependentUpon>frmCheckedListBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCheckControls.resx">
       <DependentUpon>frmCheckControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckedListBox.resx">
+      <DependentUpon>frmCheckedListBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

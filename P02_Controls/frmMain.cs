@@ -38,5 +38,12 @@ namespace P02_Controls
 
             frmCheckControls.ShowDialog();
         }
+
+        private void checkedListBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCheckedListBox frmCheckedListBox = new frmCheckedListBox();
+
+            frmCheckedListBox.ShowDialog();
+        }
     }
 }

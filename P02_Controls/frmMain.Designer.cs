@@ -34,6 +34,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kontrollerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkedListBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +81,8 @@
             // kontrollerToolStripMenuItem
             // 
             this.kontrollerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkControlsToolStripMenuItem});
+            this.checkControlsToolStripMenuItem,
+            this.checkedListBoxToolStripMenuItem});
             this.kontrollerToolStripMenuItem.Name = "kontrollerToolStripMenuItem";
             this.kontrollerToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.kontrollerToolStripMenuItem.Text = "Kontroller";
@@ -91,6 +93,13 @@
             this.checkControlsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.checkControlsToolStripMenuItem.Text = "CheckControls";
             this.checkControlsToolStripMenuItem.Click += new System.EventHandler(this.checkControlsToolStripMenuItem_Click);
+            // 
+            // checkedListBoxToolStripMenuItem
+            // 
+            this.checkedListBoxToolStripMenuItem.Name = "checkedListBoxToolStripMenuItem";
+            this.checkedListBoxToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.checkedListBoxToolStripMenuItem.Text = "CheckedListBox";
+            this.checkedListBoxToolStripMenuItem.Click += new System.EventHandler(this.checkedListBoxToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -118,5 +127,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kontrollerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkControlsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkedListBoxToolStripMenuItem;
     }
 }
