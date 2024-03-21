@@ -44,7 +44,7 @@
             this.btonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btonClose.Location = new System.Drawing.Point(705, 390);
+            this.btonClose.Location = new System.Drawing.Point(448, 433);
             this.btonClose.Name = "btonClose";
             this.btonClose.Size = new System.Drawing.Size(83, 48);
             this.btonClose.TabIndex = 2;
@@ -95,9 +95,9 @@
             // 
             this.lbelMessage.AutoSize = true;
             this.lbelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbelMessage.Location = new System.Drawing.Point(31, 390);
+            this.lbelMessage.Location = new System.Drawing.Point(30, 379);
             this.lbelMessage.Name = "lbelMessage";
-            this.lbelMessage.Size = new System.Drawing.Size(66, 25);
+            this.lbelMessage.Size = new System.Drawing.Size(53, 20);
             this.lbelMessage.TabIndex = 6;
             this.lbelMessage.Text = "label2";
             // 
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(543, 493);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbelMessage);
             this.Controls.Add(this.btonMessage);
