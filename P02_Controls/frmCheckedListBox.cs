@@ -47,6 +47,7 @@ namespace P02_Controls
 
         private void CheckAyarla(bool checkState)
         {
+            // checkstate parametresi checkboxlist içindeki elemanın seçilip seçilmeyeceğini gösteriyor
             for (int i = 0; i < chkbDiller.Items.Count; i++)
             {
                 chkbDiller.SetItemChecked(i, checkState);
