@@ -45,5 +45,12 @@ namespace P02_Controls
 
             frmCheckedListBox.ShowDialog();
         }
+
+        private void comboBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmComboBox frmComboBox = new frmComboBox();
+
+            frmComboBox.ShowDialog();
+        }
     }
 }

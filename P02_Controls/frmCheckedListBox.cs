@@ -54,7 +54,7 @@ namespace P02_Controls
             }
 
             MesajVer();
-            //
+            
         }
 
         private void MesajVer()
