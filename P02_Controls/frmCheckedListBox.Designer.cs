@@ -36,6 +36,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnHepsi = new System.Windows.Forms.RadioButton();
             this.rbtnHicbiri = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,11 +138,21 @@
             this.rbtnHicbiri.UseVisualStyleBackColor = true;
             this.rbtnHicbiri.CheckedChanged += new System.EventHandler(this.rbtnHicbiri_CheckedChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 433);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "label2";
+            // 
             // frmCheckedListBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 493);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbelMessage);
             this.Controls.Add(this.btonMessage);
@@ -168,5 +179,6 @@
         private System.Windows.Forms.RadioButton rbtnHicbiri;
         private System.Windows.Forms.RadioButton rbtnHepsi;
         public System.Windows.Forms.Label lbelMessage;
+        private System.Windows.Forms.Label label2;
     }
 }
