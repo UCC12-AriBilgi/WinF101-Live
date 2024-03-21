@@ -59,5 +59,24 @@ namespace P02_Controls
                 }
             }
         }
+
+        private void RadioControl(object sender, EventArgs e)
+        {
+            // Burası heriki rb için ortak yer dolayısıyla hangi rb ye basıldığını anlamam lazım ki ona göre mesaj verebileyim.
+
+            RadioButton rb;
+
+            rb=(RadioButton)sender; // buraya gönderen nesne bir radio butondur.
+
+            if (rb.Checked == true) // seçili ise
+            {
+                lbelMessage.Text = rb.Name + " seçili..";
+            }
+        }
+
+        private void frmCheckControls_Load(object sender, EventArgs e)
+        {
+            lbelMessage.Text = "";
+        }
     }
 }
