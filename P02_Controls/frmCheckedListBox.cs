@@ -30,9 +30,37 @@ namespace P02_Controls
 
         private void btonMessage_Click(object sender, EventArgs e)
         {
+            MesajVer();
+
+
+        }
+
+        private void rbtnHepsi_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckAyarla(true);
+        }
+
+        private void rbtnHicbiri_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckAyarla(false);
+        }
+
+        private void CheckAyarla(bool checkState)
+        {
+            for (int i = 0; i < chkbDiller.Items.Count; i++)
+            {
+                chkbDiller.SetItemChecked(i, checkState);
+            }
+
+            MesajVer();
+            //
+        }
+
+        private void MesajVer()
+        {
             // Şu an listbox içinde seçilmiş secenekler var..Onları acaba hangileri diye okumam lazım.,
 
-            var secilenDiller= new List<string>(); // seçilenler için kullanacağım bir liste yapısı (sanki dizi gibi)
+            var secilenDiller = new List<string>(); // seçilenler için kullanacağım bir liste yapısı (sanki dizi gibi)
 
             // asağıdaki bölümde sadece ve sadece seçilmiş olan secenekleri öğreniyorum/bakıyorum.
             foreach (var diller in chkbDiller.CheckedItems)
@@ -41,12 +69,7 @@ namespace P02_Controls
             }
 
             // listem hazır...seçili elemanlarla...
-            lbelMessage.Text = $"Üzerinde uğraşmakta olduğunuz diller : {string.Join(", ",secilenDiller)}";
-
-
+            lbelMessage.Text = $"Üzerinde uğraşmakta olduğunuz diller : {string.Join(", ", secilenDiller)}";
         }
-        
-
-        
     }
 }

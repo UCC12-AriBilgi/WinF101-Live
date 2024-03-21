@@ -123,6 +123,7 @@
             this.rbtnHepsi.TabStop = true;
             this.rbtnHepsi.Text = "Hepsini Seç";
             this.rbtnHepsi.UseVisualStyleBackColor = true;
+            this.rbtnHepsi.CheckedChanged += new System.EventHandler(this.rbtnHepsi_CheckedChanged);
             // 
             // rbtnHicbiri
             // 
@@ -134,6 +135,7 @@
             this.rbtnHicbiri.TabStop = true;
             this.rbtnHicbiri.Text = "Hepsini Seçme";
             this.rbtnHicbiri.UseVisualStyleBackColor = true;
+            this.rbtnHicbiri.CheckedChanged += new System.EventHandler(this.rbtnHicbiri_CheckedChanged);
             // 
             // frmCheckedListBox
             // 
