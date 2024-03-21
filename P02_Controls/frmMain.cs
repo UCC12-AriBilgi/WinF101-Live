@@ -52,5 +52,12 @@ namespace P02_Controls
 
             frmComboBox.ShowDialog();
         }
+
+        private void listBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListBox frmListBox = new frmListBox();
+
+            frmListBox.ShowDialog();
+        }
     }
 }

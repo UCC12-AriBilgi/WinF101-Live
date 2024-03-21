@@ -79,6 +79,12 @@
     <Compile Include="frmComboBox.Designer.cs">
       <DependentUpon>frmComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListBox.Designer.cs">
+      <DependentUpon>frmListBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmComboBox.resx">
       <DependentUpon>frmComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListBox.resx">
+      <DependentUpon>frmListBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
