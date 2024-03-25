@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_DateDiffer", "P07_DateD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_MonthDays", "P08_MonthDays\P08_MonthDays.csproj", "{CAE6E51E-E1A5-47E8-89A8-FE5FA5E703F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09_FormKeyDown", "P09_FormKeyDown\P09_FormKeyDown.csproj", "{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{CAE6E51E-E1A5-47E8-89A8-FE5FA5E703F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAE6E51E-E1A5-47E8-89A8-FE5FA5E703F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAE6E51E-E1A5-47E8-89A8-FE5FA5E703F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
