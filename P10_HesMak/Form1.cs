@@ -14,8 +14,10 @@ namespace P10_HesMak
     {
         // Global tanımlar
 
+        bool esittir = false; // = butonuna basılmış durumu
         bool islemsec=false; // herhangi bir işlem(+-*/) seçilmiş mi
         bool sayisec=false; // işlem için sayıların seçilip/seçilmediğini belirtiyor
+
         string islem; // hangi işlemin yapılacağını tutuyor.
 
         int sayi1 = 0;
@@ -52,8 +54,6 @@ namespace P10_HesMak
                 }
             }
 
-
-
         }
 
         #region Sayısal Buton Bölgesi
@@ -74,8 +74,14 @@ namespace P10_HesMak
                 tboxSonuc.Text = tboxSonuc.Text + button.Text;
             }
 
-        }
+            //? Sayı giriyoruz ama sayı seçildiğini söylemiyoruz.
+            sayisec = true;
+            islemsec = false;
 
+        }
+        #endregion
+
+        #region İşlem Öğrenme bölgesi
         private void IslemOgren(object sender, EventArgs e)
         {
             // Buraya + - * / butonlarıyla geliniyor. hangisi acaba?
@@ -91,7 +97,7 @@ namespace P10_HesMak
                 islemsec = true;
             }
 
-            if ((sayisec && sayi1 == 0))
+            if ((sayisec && sayi1 == 0) || esittir)
             {
                 sayi1 = Convert.ToInt32(tboxSonuc.Text);
 
@@ -129,11 +135,14 @@ namespace P10_HesMak
 
                 tboxSonuc.Text = sonuc.ToString();
 
+                // ekrana o anki sonucu yazdı.Sayılarımın yeni durumunu ayarlama işlemi...
 
-
-
+                sayi1 = sonuc; // ekranda yazan
+                sayi2 = 0;
 
             }
+
+            // History
 
 
         }
