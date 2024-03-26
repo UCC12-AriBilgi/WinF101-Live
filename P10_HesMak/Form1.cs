@@ -15,9 +15,12 @@ namespace P10_HesMak
         // Global tanımlar
 
         bool islemsec=false; // herhangi bir işlem(+-*/) seçilmiş mi
+        bool sayisec=false; // işlem için sayıların seçilip/seçilmediğini belirtiyor
+        string islem; // hangi işlemin yapılacağını tutuyor.
 
         int sayi1 = 0;
         int sayi2 = 0;
+        int sonuc = 0;
 
         public Form1()
         {
@@ -41,7 +44,8 @@ namespace P10_HesMak
                     else // bulduğum kontrol butondan farklıysa
                     {
                         control.Font = new Font("Arial", 13);
-                        (control as Button).FlatStyle = FlatStyle.Flat;
+                        (control as Button).FlatStyle = FlatStyle.Flat; // .net6
+                       //( (Button)control).FlatStyle = FlatStyle.Flat; // .net8
                         (control as Button).FlatAppearance.BorderSize = 0; // Border kalktı
                         (control as Button).BackColor = Color.FromName("ControlLight"); // renk ayarlaması
                     }
@@ -57,7 +61,79 @@ namespace P10_HesMak
         // herbir sayısal butonun ortak olarak kullanabileceği bir metot. Amaç 10 tane sayısal butonların ayrı ayrı olacak click metotlarını tek yere toparlamak..
         private void SayisalGiris(object sender, EventArgs e)
         {
+            // Buraya 012...9 butonlarıyla geliniyor. Acaba hangisi.
+
             Button button = (Button)sender; // hangi butondan gelindiğini anlayabilmek için...Text özelliği ile mesela
+
+            if (tboxSonuc.Text == "0" || islemsec)
+            {
+                tboxSonuc.Text = button.Text;
+            }
+            else
+            {
+                tboxSonuc.Text = tboxSonuc.Text + button.Text;
+            }
+
+        }
+
+        private void IslemOgren(object sender, EventArgs e)
+        {
+            // Buraya + - * / butonlarıyla geliniyor. hangisi acaba?
+            string islemkod = "+-*/";
+
+
+            Button button = (Button)sender; // Basılmış olan butonu öğrendim.
+
+            if (islemkod.IndexOf(button.Text) != -1) // butonun text in de yukardaki karakterlerden biri varmı
+            {
+                islem = button.Text; // basılan butonun texti
+                // demek bir işlem yapılacak
+                islemsec = true;
+            }
+
+            if ((sayisec && sayi1 == 0))
+            {
+                sayi1 = Convert.ToInt32(tboxSonuc.Text);
+
+                tboxHistory.Text = sayi1.ToString() + " " + islem;
+            }
+            else if (sayisec && sayi2==0)
+            {
+                sayi2 = Convert.ToInt32(tboxSonuc);
+
+                tboxHistory.Text= tboxHistory.Text + sayi2.ToString() + " " + islem;
+
+                // sayi1 ve sayi2 yi burlara kadar aldı öğrendi..
+                // işlemlere baslama zamanı
+
+                switch (islem)
+                {
+                    case "+":
+                        sonuc = sayi1 + sayi2;
+                        break;
+
+                    case "-":
+                        sonuc= sayi1 - sayi2;
+                        break;
+
+                    case "*":
+                        sonuc= sayi1 * sayi2;
+                        break;
+
+                    case "/":
+                        sonuc=sayi1 / sayi2;
+                        break;
+                    default:
+                        break;
+                }
+
+                tboxSonuc.Text = sonuc.ToString();
+
+
+
+
+
+            }
 
 
         }
