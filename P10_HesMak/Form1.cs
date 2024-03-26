@@ -75,7 +75,7 @@ namespace P10_HesMak
             }
 
             //? Sayı giriyoruz ama sayı seçildiğini söylemiyoruz.
-            sayisec = true;
+            sayisec = true; // sayı girişi yapıyorum
             islemsec = false;
 
         }
@@ -105,7 +105,7 @@ namespace P10_HesMak
             }
             else if (sayisec && sayi2==0)
             {
-                sayi2 = Convert.ToInt32(tboxSonuc);
+                sayi2 = Convert.ToInt32(tboxSonuc.Text);
 
                 tboxHistory.Text= tboxHistory.Text + sayi2.ToString() + " " + islem;
 

@@ -1,0 +1,9 @@
+﻿Bir veritabanına ulasabilmek için gerekli olanlar;
+
+- VT bağlanmak için gerekli olan bir string bilgi (ConnectionString)
+- VT bulunduğu sistemin adı (SQLServer adı)
+- Bağlantıyı ayağa kaldırmak için Connection nesnesi
+
+            //Server = myServerName\myInstanceName; Database = myDataBase; User Id = myUsername; Password = myPassword;
+
+
