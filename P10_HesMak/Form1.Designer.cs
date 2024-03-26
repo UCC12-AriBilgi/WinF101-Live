@@ -56,7 +56,7 @@
             // 
             this.tboxHistory.BackColor = System.Drawing.SystemColors.Control;
             this.tboxHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tboxHistory.Location = new System.Drawing.Point(12, 12);
+            this.tboxHistory.Location = new System.Drawing.Point(35, 12);
             this.tboxHistory.Name = "tboxHistory";
             this.tboxHistory.Size = new System.Drawing.Size(190, 20);
             this.tboxHistory.TabIndex = 0;
@@ -64,7 +64,7 @@
             // tboxSonuc
             // 
             this.tboxSonuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tboxSonuc.Location = new System.Drawing.Point(12, 38);
+            this.tboxSonuc.Location = new System.Drawing.Point(35, 38);
             this.tboxSonuc.Name = "tboxSonuc";
             this.tboxSonuc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tboxSonuc.Size = new System.Drawing.Size(190, 38);
@@ -73,16 +73,17 @@
             // 
             // button0
             // 
-            this.button0.Location = new System.Drawing.Point(61, 278);
+            this.button0.Location = new System.Drawing.Point(84, 278);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(43, 43);
             this.button0.TabIndex = 2;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.SayisalGiris);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 229);
+            this.button1.Location = new System.Drawing.Point(35, 229);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(43, 43);
             this.button1.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(61, 229);
+            this.button2.Location = new System.Drawing.Point(84, 229);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(43, 43);
             this.button2.TabIndex = 4;
@@ -100,7 +101,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(110, 229);
+            this.button3.Location = new System.Drawing.Point(133, 229);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(43, 43);
             this.button3.TabIndex = 5;
@@ -109,7 +110,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 180);
+            this.button4.Location = new System.Drawing.Point(35, 180);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(43, 43);
             this.button4.TabIndex = 6;
@@ -118,7 +119,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(61, 180);
+            this.button5.Location = new System.Drawing.Point(84, 180);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(43, 43);
             this.button5.TabIndex = 7;
@@ -127,7 +128,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(110, 180);
+            this.button6.Location = new System.Drawing.Point(133, 180);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(43, 43);
             this.button6.TabIndex = 8;
@@ -136,7 +137,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(12, 131);
+            this.button7.Location = new System.Drawing.Point(35, 131);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(43, 43);
             this.button7.TabIndex = 9;
@@ -145,7 +146,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(61, 131);
+            this.button8.Location = new System.Drawing.Point(84, 131);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(43, 43);
             this.button8.TabIndex = 10;
@@ -154,7 +155,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(110, 131);
+            this.button9.Location = new System.Drawing.Point(133, 131);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(43, 43);
             this.button9.TabIndex = 11;
@@ -163,7 +164,7 @@
             // 
             // btonEsittir
             // 
-            this.btonEsittir.Location = new System.Drawing.Point(159, 278);
+            this.btonEsittir.Location = new System.Drawing.Point(182, 278);
             this.btonEsittir.Name = "btonEsittir";
             this.btonEsittir.Size = new System.Drawing.Size(43, 43);
             this.btonEsittir.TabIndex = 12;
@@ -172,7 +173,7 @@
             // 
             // btonTopla
             // 
-            this.btonTopla.Location = new System.Drawing.Point(159, 229);
+            this.btonTopla.Location = new System.Drawing.Point(182, 229);
             this.btonTopla.Name = "btonTopla";
             this.btonTopla.Size = new System.Drawing.Size(43, 43);
             this.btonTopla.TabIndex = 13;
@@ -181,7 +182,7 @@
             // 
             // btonCikart
             // 
-            this.btonCikart.Location = new System.Drawing.Point(159, 180);
+            this.btonCikart.Location = new System.Drawing.Point(182, 180);
             this.btonCikart.Name = "btonCikart";
             this.btonCikart.Size = new System.Drawing.Size(43, 43);
             this.btonCikart.TabIndex = 14;
@@ -190,7 +191,7 @@
             // 
             // btonCarp
             // 
-            this.btonCarp.Location = new System.Drawing.Point(159, 131);
+            this.btonCarp.Location = new System.Drawing.Point(182, 131);
             this.btonCarp.Name = "btonCarp";
             this.btonCarp.Size = new System.Drawing.Size(43, 43);
             this.btonCarp.TabIndex = 15;
@@ -199,7 +200,7 @@
             // 
             // btonBol
             // 
-            this.btonBol.Location = new System.Drawing.Point(159, 82);
+            this.btonBol.Location = new System.Drawing.Point(182, 82);
             this.btonBol.Name = "btonBol";
             this.btonBol.Size = new System.Drawing.Size(43, 43);
             this.btonBol.TabIndex = 16;
@@ -208,7 +209,7 @@
             // 
             // btonCE
             // 
-            this.btonCE.Location = new System.Drawing.Point(12, 82);
+            this.btonCE.Location = new System.Drawing.Point(35, 82);
             this.btonCE.Name = "btonCE";
             this.btonCE.Size = new System.Drawing.Size(43, 43);
             this.btonCE.TabIndex = 17;
@@ -217,7 +218,7 @@
             // 
             // btonC
             // 
-            this.btonC.Location = new System.Drawing.Point(61, 82);
+            this.btonC.Location = new System.Drawing.Point(84, 82);
             this.btonC.Name = "btonC";
             this.btonC.Size = new System.Drawing.Size(43, 43);
             this.btonC.TabIndex = 18;
@@ -226,16 +227,17 @@
             // 
             // btonHane
             // 
-            this.btonHane.Location = new System.Drawing.Point(110, 82);
+            this.btonHane.BackColor = System.Drawing.SystemColors.Control;
+            this.btonHane.Location = new System.Drawing.Point(133, 82);
             this.btonHane.Name = "btonHane";
             this.btonHane.Size = new System.Drawing.Size(43, 43);
             this.btonHane.TabIndex = 19;
             this.btonHane.Text = "<<";
-            this.btonHane.UseVisualStyleBackColor = true;
+            this.btonHane.UseVisualStyleBackColor = false;
             // 
             // btonIsaret
             // 
-            this.btonIsaret.Location = new System.Drawing.Point(12, 278);
+            this.btonIsaret.Location = new System.Drawing.Point(35, 278);
             this.btonIsaret.Name = "btonIsaret";
             this.btonIsaret.Size = new System.Drawing.Size(43, 43);
             this.btonIsaret.TabIndex = 20;
@@ -244,7 +246,7 @@
             // 
             // btonNokta
             // 
-            this.btonNokta.Location = new System.Drawing.Point(110, 278);
+            this.btonNokta.Location = new System.Drawing.Point(133, 278);
             this.btonNokta.Name = "btonNokta";
             this.btonNokta.Size = new System.Drawing.Size(43, 43);
             this.btonNokta.TabIndex = 21;
@@ -255,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(215, 340);
+            this.ClientSize = new System.Drawing.Size(269, 340);
             this.Controls.Add(this.btonNokta);
             this.Controls.Add(this.btonIsaret);
             this.Controls.Add(this.btonHane);
@@ -279,7 +281,9 @@
             this.Controls.Add(this.tboxSonuc);
             this.Controls.Add(this.tboxHistory);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hesap Makinası";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
