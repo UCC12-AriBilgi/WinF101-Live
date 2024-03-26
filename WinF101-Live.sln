@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_MonthDays", "P08_MonthD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09_FormKeyDown", "P09_FormKeyDown\P09_FormKeyDown.csproj", "{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_HesMak", "P10_HesMak\P10_HesMak.csproj", "{33D5278B-AEB4-4720-8050-3333CFF69B46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{072C0DA6-0AB2-4F21-93FA-22412A46DDCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D5278B-AEB4-4720-8050-3333CFF69B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D5278B-AEB4-4720-8050-3333CFF69B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D5278B-AEB4-4720-8050-3333CFF69B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D5278B-AEB4-4720-8050-3333CFF69B46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
