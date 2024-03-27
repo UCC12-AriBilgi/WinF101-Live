@@ -62,6 +62,7 @@ namespace P12_ADO_WinF
             tboxCity.ReadOnly = true;
             tboxCountry.ReadOnly = true;
 
+
         }
 
         private void LoadData()
@@ -97,6 +98,32 @@ namespace P12_ADO_WinF
         private void btonNext_Click(object sender, EventArgs e)
         {
             ShowData(); // bir sonraki kayıdı ekrana getirebilmek için tekrardan ShowData metoduna gittim.
+        }
+
+        private void btonNew_Click(object sender, EventArgs e)
+        {
+            tboxEmployeeID.Text = tboxFName.Text = tboxLName.Text = tboxTitle.Text = tboxCity.Text = tboxCountry.Text = "";
+
+            // readonly olan bazı kontroller için veri girişini sağlıyorum.
+            tboxFName.ReadOnly = tboxLName.ReadOnly = tboxTitle.ReadOnly = tboxCity.ReadOnly = tboxCountry.ReadOnly = false;
+
+            // datareader nesnesini tekrar farklı bir şekilde kullanabilmek için kapatıyorum.
+
+            reader.Close();
+
+            cmd.CommandText = "SELECT ISNULL(MAX(EmployeeID),1000) + 1 FROM Employees";
+
+            tboxEmployeeID.Text=cmd.ExecuteScalar().ToString();
+
+            btonInsert.Enabled = true;
+            btonUpdate.Enabled = false;
+            btonDelete.Enabled = false;
+
+            btonNew.Enabled = false;
+
+            tboxFName.Focus();
+
+
         }
     }
 }

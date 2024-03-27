@@ -42,6 +42,10 @@
             this.tboxCity = new System.Windows.Forms.TextBox();
             this.tboxCountry = new System.Windows.Forms.TextBox();
             this.btonNext = new System.Windows.Forms.Button();
+            this.btonNew = new System.Windows.Forms.Button();
+            this.btonInsert = new System.Windows.Forms.Button();
+            this.btonUpdate = new System.Windows.Forms.Button();
+            this.btonDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btonClose
@@ -161,11 +165,52 @@
             this.btonNext.UseVisualStyleBackColor = true;
             this.btonNext.Click += new System.EventHandler(this.btonNext_Click);
             // 
+            // btonNew
+            // 
+            this.btonNew.Location = new System.Drawing.Point(242, 46);
+            this.btonNew.Name = "btonNew";
+            this.btonNew.Size = new System.Drawing.Size(75, 23);
+            this.btonNew.TabIndex = 14;
+            this.btonNew.Text = "Yeni";
+            this.btonNew.UseVisualStyleBackColor = true;
+            this.btonNew.Click += new System.EventHandler(this.btonNew_Click);
+            // 
+            // btonInsert
+            // 
+            this.btonInsert.Location = new System.Drawing.Point(18, 261);
+            this.btonInsert.Name = "btonInsert";
+            this.btonInsert.Size = new System.Drawing.Size(75, 23);
+            this.btonInsert.TabIndex = 15;
+            this.btonInsert.Text = "Insert";
+            this.btonInsert.UseVisualStyleBackColor = true;
+            // 
+            // btonUpdate
+            // 
+            this.btonUpdate.Location = new System.Drawing.Point(113, 261);
+            this.btonUpdate.Name = "btonUpdate";
+            this.btonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btonUpdate.TabIndex = 16;
+            this.btonUpdate.Text = "Update";
+            this.btonUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btonDelete
+            // 
+            this.btonDelete.Location = new System.Drawing.Point(205, 261);
+            this.btonDelete.Name = "btonDelete";
+            this.btonDelete.Size = new System.Drawing.Size(75, 23);
+            this.btonDelete.TabIndex = 17;
+            this.btonDelete.Text = "Delete";
+            this.btonDelete.UseVisualStyleBackColor = true;
+            // 
             // frmEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 349);
+            this.Controls.Add(this.btonDelete);
+            this.Controls.Add(this.btonUpdate);
+            this.Controls.Add(this.btonInsert);
+            this.Controls.Add(this.btonNew);
             this.Controls.Add(this.btonNext);
             this.Controls.Add(this.tboxCountry);
             this.Controls.Add(this.tboxCity);
@@ -204,5 +249,9 @@
         private System.Windows.Forms.TextBox tboxCity;
         private System.Windows.Forms.TextBox tboxCountry;
         private System.Windows.Forms.Button btonNext;
+        private System.Windows.Forms.Button btonNew;
+        private System.Windows.Forms.Button btonInsert;
+        private System.Windows.Forms.Button btonUpdate;
+        private System.Windows.Forms.Button btonDelete;
     }
 }
