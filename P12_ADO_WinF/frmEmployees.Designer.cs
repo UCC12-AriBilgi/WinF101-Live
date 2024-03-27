@@ -41,6 +41,7 @@
             this.tboxTitle = new System.Windows.Forms.TextBox();
             this.tboxCity = new System.Windows.Forms.TextBox();
             this.tboxCountry = new System.Windows.Forms.TextBox();
+            this.btonNext = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btonClose
@@ -150,11 +151,22 @@
             this.tboxCountry.Size = new System.Drawing.Size(100, 20);
             this.tboxCountry.TabIndex = 12;
             // 
+            // btonNext
+            // 
+            this.btonNext.Location = new System.Drawing.Point(242, 17);
+            this.btonNext.Name = "btonNext";
+            this.btonNext.Size = new System.Drawing.Size(75, 23);
+            this.btonNext.TabIndex = 13;
+            this.btonNext.Text = "Sonraki Kayıt";
+            this.btonNext.UseVisualStyleBackColor = true;
+            this.btonNext.Click += new System.EventHandler(this.btonNext_Click);
+            // 
             // frmEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 349);
+            this.Controls.Add(this.btonNext);
             this.Controls.Add(this.tboxCountry);
             this.Controls.Add(this.tboxCity);
             this.Controls.Add(this.tboxTitle);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.TextBox tboxTitle;
         private System.Windows.Forms.TextBox tboxCity;
         private System.Windows.Forms.TextBox tboxCountry;
+        private System.Windows.Forms.Button btonNext;
     }
 }

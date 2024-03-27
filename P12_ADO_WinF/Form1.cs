@@ -29,5 +29,10 @@ namespace P12_ADO_WinF
 
             frmEmployees.ShowDialog();
         }
+
+        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

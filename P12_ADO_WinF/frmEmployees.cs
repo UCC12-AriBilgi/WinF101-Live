@@ -93,5 +93,10 @@ namespace P12_ADO_WinF
                 MessageBox.Show("Herhangi bir veri bulunamadı..");
             }
         }
+
+        private void btonNext_Click(object sender, EventArgs e)
+        {
+            ShowData(); // bir sonraki kayıdı ekrana getirebilmek için tekrardan ShowData metoduna gittim.
+        }
     }
 }
