@@ -125,5 +125,43 @@ namespace P12_ADO_WinF
 
 
         }
+
+        private void btonInsert_Click(object sender, EventArgs e)
+        {
+            if (tboxFName.Text == "")
+                MessageBox.Show("Lütfen Ad bilgisini giriniz","Ad Bilgisi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            else if (tboxLName.Text == "")
+                MessageBox.Show("Lütfen Soyad bilgisini giriniz", "Soyad Bilgisi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                // Burada yapılacak şey SQL INSERT komut yapısını oluşturmak..
+                sqlstr = String.Format("INSERT INTO Employees (FirstName,LastName,Title,City,Country) VALUES ('{0}','{1}','{2}','{3}','{4}')",tboxFName.Text,tboxLName.Text,tboxTitle.Text,tboxCity.Text,tboxCountry.Text);
+
+                ExecuteDML(sqlstr);
+
+            }
+        }
+
+        private void ExecuteDML(string pSqlText)
+        {
+            // görevi sadece sql komutunu çalıştırmak olacak olan metot
+
+            DialogResult dr = MessageBox.Show("Bu SQL komutunu çalıştırmak istiyor musunuz ?\n\n" + pSqlText, "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes) 
+            { 
+                cmd.CommandText= pSqlText; 
+
+                int count=cmd.ExecuteNonQuery();
+
+                if (count > 0)
+                {
+                    // Kayıt işlemi gerçekleştiyse...
+                    MessageBox.Show("Kayıt işlemi başarıyla gerçekleşti..");
+                }
+                else
+                    MessageBox.Show("Kayıt işlemi yapılamadı..");
+            }
+        }
     }
 }

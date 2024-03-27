@@ -183,6 +183,7 @@
             this.btonInsert.TabIndex = 15;
             this.btonInsert.Text = "Insert";
             this.btonInsert.UseVisualStyleBackColor = true;
+            this.btonInsert.Click += new System.EventHandler(this.btonInsert_Click);
             // 
             // btonUpdate
             // 
