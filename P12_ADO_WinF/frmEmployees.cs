@@ -56,11 +56,11 @@ namespace P12_ADO_WinF
             // formumun ekrana gelirkenki ilk hali
 
             tboxEmployeeID.ReadOnly = true; // bu değere dokunulamaz..Key
-            tboxFName.ReadOnly = true;
-            tboxLName.ReadOnly = true;
-            tboxTitle.ReadOnly = true;
-            tboxCity.ReadOnly = true;
-            tboxCountry.ReadOnly = true;
+            tboxFName.ReadOnly = false;
+            tboxLName.ReadOnly = false;
+            tboxTitle.ReadOnly = false;
+            tboxCity.ReadOnly = false;
+            tboxCountry.ReadOnly = false;
 
 
         }
@@ -139,12 +139,14 @@ namespace P12_ADO_WinF
 
                 ExecuteDML(sqlstr);
 
+                LoadData();
             }
         }
 
         private void ExecuteDML(string pSqlText)
         {
             // görevi sadece sql komutunu çalıştırmak olacak olan metot
+            reader.Close();
 
             DialogResult dr = MessageBox.Show("Bu SQL komutunu çalıştırmak istiyor musunuz ?\n\n" + pSqlText, "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -162,6 +164,33 @@ namespace P12_ADO_WinF
                 else
                     MessageBox.Show("Kayıt işlemi yapılamadı..");
             }
+        }
+
+        private void btonUpdate_Click(object sender, EventArgs e)
+        {
+            if (tboxFName.Text == "")
+                MessageBox.Show("Lütfen Ad bilgisini giriniz", "Ad Bilgisi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (tboxLName.Text == "")
+                MessageBox.Show("Lütfen Soyad bilgisini giriniz", "Soyad Bilgisi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                // Burada yapılacak şey SQL UPDATE komut yapısını oluşturmak..
+                sqlstr = String.Format("UPDATE Employees SET FirstName='{0}',LastName='{1}',Title='{2}',City='{3}',Country='{4}' WHERE EmployeeID={5}", tboxFName.Text, tboxLName.Text, tboxTitle.Text, tboxCity.Text, tboxCountry.Text,tboxEmployeeID.Text);
+
+                ExecuteDML(sqlstr);
+
+                LoadData();
+
+            }
+        }
+
+        private void btonDelete_Click(object sender, EventArgs e)
+        {
+            sqlstr = "DELETE FROM Employees WHERE EmployeeID=" + tboxEmployeeID.Text;
+
+            ExecuteDML(sqlstr);
+
+            LoadData();
         }
     }
 }

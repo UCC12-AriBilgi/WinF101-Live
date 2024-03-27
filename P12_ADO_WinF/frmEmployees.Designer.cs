@@ -193,6 +193,7 @@
             this.btonUpdate.TabIndex = 16;
             this.btonUpdate.Text = "Update";
             this.btonUpdate.UseVisualStyleBackColor = true;
+            this.btonUpdate.Click += new System.EventHandler(this.btonUpdate_Click);
             // 
             // btonDelete
             // 
@@ -202,6 +203,7 @@
             this.btonDelete.TabIndex = 17;
             this.btonDelete.Text = "Delete";
             this.btonDelete.UseVisualStyleBackColor = true;
+            this.btonDelete.Click += new System.EventHandler(this.btonDelete_Click);
             // 
             // frmEmployees
             // 
