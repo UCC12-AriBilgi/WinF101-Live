@@ -53,7 +53,7 @@ namespace P12_ADO_WinF
                     sqlstr += "CompanyName=@CompanyName,";
                     sqlstr += "ContactName=@ContactName,";
                     sqlstr += "Country=@Country ";
-                    sqlstr += "WHERE CustomerID=@CustomerID"
+                    sqlstr += "WHERE CustomerID=@CustomerID";
 
 
                     break;
