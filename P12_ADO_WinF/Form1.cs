@@ -34,5 +34,12 @@ namespace P12_ADO_WinF
         {
             Application.Exit();
         }
+
+        private void customersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomers frmCustomers = new frmCustomers(); 
+
+            frmCustomers.ShowDialog();
+        }
     }
 }
