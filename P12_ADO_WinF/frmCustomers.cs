@@ -111,8 +111,13 @@ namespace P12_ADO_WinF
         private void btonAdd_Click(object sender, EventArgs e)
         {
             // Kayıt Ekleme
-            ShowData("I");// Insert yapacağını anlatacağım
+            ShowData("I");// I ile Insert yapacağını anlatacağım diğer forma
 
+        }
+
+        private void btonUpdate_Click(object sender, EventArgs e)
+        {
+            ShowData("U"); // Update yapacağını anlatıyoruz..
         }
 
         private void ShowData(string prmMode)
@@ -149,11 +154,54 @@ namespace P12_ADO_WinF
             }
 
             frmCustomerDetail.ShowDialog();
+
+            BindGrid(); // Yeni oluşan verileri tekrardan DG içine yüklemek için.
+
+
         }
 
-        private void btonUpdate_Click(object sender, EventArgs e)
+        private void dgrdCustomers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ShowData("U");
+            // Buradan da Update modda diğer forma gitsin
+
+            ShowData("U"); // Update yapacağını anlatıyoruz..
+        }
+
+        private void btonDelete_Click(object sender, EventArgs e)
+        {
+            sqlstr = "DELETE FROM Customers WHERE CustomerID=@CustomerID";
+
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand cmd = new SqlCommand(sqlstr, conn))
+                {
+                    // hala veri yok..Verileri dolduralım.
+                    cmd.Parameters.AddWithValue("CustomerID", dgrdCustomers.CurrentRow.Cells[0].Value); // DG deki 0.indexdeki kolonda duran değer
+
+                    cmd.CommandType = CommandType.Text;
+
+                    // artık veri hazır...
+
+                    try
+                    {
+                        conn.Open(); // VT bağlantısı açıldı.
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Bilgileriniz VT den  basarıyla silindi...");
+
+                        BindGrid();
+
+                    }
+                    catch (Exception message)
+                    {
+                        MessageBox.Show("Hata : " + message.ToString());
+
+                    }
+
+                }
+            }
         }
     }
 }

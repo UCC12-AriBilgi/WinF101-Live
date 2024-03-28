@@ -65,6 +65,7 @@
             this.dgrdCustomers.Name = "dgrdCustomers";
             this.dgrdCustomers.Size = new System.Drawing.Size(531, 275);
             this.dgrdCustomers.TabIndex = 2;
+            this.dgrdCustomers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrdCustomers_CellContentDoubleClick);
             // 
             // btonAdd
             // 
@@ -94,6 +95,7 @@
             this.btonDelete.TabIndex = 5;
             this.btonDelete.Text = "Sil";
             this.btonDelete.UseVisualStyleBackColor = true;
+            this.btonDelete.Click += new System.EventHandler(this.btonDelete_Click);
             // 
             // frmCustomers
             // 

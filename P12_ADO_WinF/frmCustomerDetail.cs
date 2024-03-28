@@ -42,6 +42,8 @@ namespace P12_ADO_WinF
         {
             // VT gidecek sql komutunu I/U durumuna göre ayarlama yapılıyor.
 
+
+
             switch (Mod)
             {
                 // Verinin güvenliği için dış dünyaya karşı ...Parametresel bir yapı kullanmanız tavsiye olunur.
@@ -88,7 +90,7 @@ namespace P12_ADO_WinF
 
                         MessageBox.Show("Bilgileriniz VT ye basarıyla işlendi...");
 
-                        this.Close();
+                        this.Close(); // eğer işlem basarılı ise formu kapat ana Customer formuna dön
                     }
                     catch (Exception message)
                     {

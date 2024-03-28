@@ -90,8 +90,9 @@
             // tboxCustomerID
             // 
             this.tboxCustomerID.Location = new System.Drawing.Point(117, 23);
+            this.tboxCustomerID.MaxLength = 5;
             this.tboxCustomerID.Name = "tboxCustomerID";
-            this.tboxCustomerID.Size = new System.Drawing.Size(100, 20);
+            this.tboxCustomerID.Size = new System.Drawing.Size(46, 20);
             this.tboxCustomerID.TabIndex = 5;
             // 
             // tboxCompanyName
