@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,8 @@ namespace P12_ADO_WinF
 
         private void btonSave_Click(object sender, EventArgs e)
         {
+            // VT gidecek sql komutunu I/U durumuna göre ayarlama yapılıyor.
+
             switch (Mod)
             {
                 // Verinin güvenliği için dış dünyaya karşı ...Parametresel bir yapı kullanmanız tavsiye olunur.
@@ -55,16 +58,45 @@ namespace P12_ADO_WinF
                     sqlstr += "Country=@Country ";
                     sqlstr += "WHERE CustomerID=@CustomerID";
 
-
                     break;
-
-
-
-
-
-
                 default:
                     break;
+            }
+
+            // sql kod oluşturuldu.Eksiğimiz ne? Ne yok. Veri yok
+
+            using(SqlConnection conn=new SqlConnection(connStr))
+            {
+                using(SqlCommand cmd = new SqlCommand(sqlstr, conn))
+                {
+                    // hala veri yok..Verileri dolduralım.
+                    cmd.Parameters.AddWithValue("CustomerID", tboxCustomerID.Text);
+
+                    cmd.Parameters.AddWithValue("CompanyName", tboxCompanyName.Text);
+
+                    cmd.Parameters.AddWithValue("ContactName", tboxContactName.Text);
+
+                    cmd.Parameters.AddWithValue("Country", tboxCountry.Text);
+
+                    // artık veri hazır...
+
+                    try
+                    {
+                        conn.Open(); // VT bağlantısı açıldı.
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Bilgileriniz VT ye basarıyla işlendi...");
+
+                        this.Close();
+                    }
+                    catch (Exception message)
+                    {
+                        MessageBox.Show("Hata : " + message.ToString());
+
+                    }
+
+                }
             }
         }
     }
